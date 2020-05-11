@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Jumbotron from "./components/Jumbotron/Jumbotron";
-import Card from "./components/Card/Card";
-import Main from "./components/Main/Main";
+import Navbar from "./components/Navbar";
+import Jumbotron from "./components/Jumbotron";
+import ImageCard from "./components/ImageCard";
+import Main from "./components/Main";
 
 import myCards from "./myCards.json";
 
@@ -20,12 +20,15 @@ class App extends Component {
     render() {
         return (
             <Main>
-                <Navbar />
-                <Jumbotron />
+                {/* <Navbar />
+                <Jumbotron /> */}
+                <Navbar></Navbar>
+                <Jumbotron></Jumbotron>
 
-                {this.state.myCards.forEach(picture => (
-                    <Card
-                        isClicked={this.isClicked}
+                {/* {this.state.myCards.forEach(picture => ( */}
+                {myCards.forEach(picture => (
+                    <ImageCard
+                        // isClicked={this.isClicked}
                         id={picture.id}
                         image={picture.image}
                     />
@@ -34,15 +37,5 @@ class App extends Component {
         );
     }
 }
-
-// function App() {
-//     return (
-//         <div>
-//             <Navbar />
-//             <Jumbotron />
-//             <Card />
-//         </div>
-//     );
-// }
 
 export default App;

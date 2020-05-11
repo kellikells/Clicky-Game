@@ -1,5 +1,5 @@
 import React from "react";
-import "Navbar.css";
+import "./style.css";
 
 
 // --- JSX curly braces to evaluate the style object on the JSX tag
@@ -14,7 +14,7 @@ function Navbar() {
                 </li>
             </ul>
         </nav>
-    )
+    );
 }
 
 
