@@ -1,9 +1,14 @@
 .navbar {
     background-color: darkslateblue;
-    min-height: 50px;
-    position: fixed;
-    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 50px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    overflow: auto;
+    justify-content: space-around;
 }
 
 .navbar li {
