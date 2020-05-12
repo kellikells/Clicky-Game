@@ -10,6 +10,20 @@ console.log(myCards);
 
 function App() {
 
+    // --- putting components together ---
+    return (
+        <Main>
+
+            <Jumbotron />
+
+            <Navbar />
+            {/* ==== map method: used to apply ImageCard component === */}
+            {myCards.map(picture => (
+                <ImageCard picture={picture} />
+            ))}
+        </Main>
+    );
+
     // --- setting this.state.myCards to the myCards json array
     // state = {
     //     myCards
@@ -17,18 +31,6 @@ function App() {
 
     // --- change property of clicked 
     // isClicked =
-
-    return (
-        <Main>
-            <Navbar />
-            <Jumbotron />
-
-            {myCards.forEach(picture => (
-                <ImageCard picture={picture} />
-            ))}
-        </Main>
-    );
 }
-
 
 export default App;

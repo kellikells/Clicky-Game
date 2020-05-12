@@ -1,18 +1,19 @@
 .navbar {
     background-color: darkslateblue;
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 50px;
-    width: 100%;
+
+    max-height: 100%;
+    width: auto;
     position: fixed;
-    display: flex;
     flex-flow: row wrap;
-    align-content: flex-start;
+    align-items: center;
     overflow: auto;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .navbar li {
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
     display: inline-block;
     text-align: center;
 }

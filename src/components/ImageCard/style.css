@@ -1,8 +1,8 @@
 .oneCard {
     position: relative;
-    width: 220px;
-    height: 220px;
-    background-color: red;
+    width: 200px;
+    height: auto;
+    /* background-color: red; */
 }
 
 .oneCard > .img-container {

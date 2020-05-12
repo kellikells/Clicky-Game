@@ -12,9 +12,9 @@ import "./style.css";
 function ImageCard(props) {
     return (
         <div className="oneCard">
-            <div className="img-container">
-                <img alt={props.id} src={props.image} key={props.id} />
-            </div>
+        
+                <img alt={props.picture.id} src={props.picture.image} key={props.picture.id} />
+        
         </div>
     );
 }
