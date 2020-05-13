@@ -1,11 +1,10 @@
-.oneCard {
+.card {
     position: relative;
     width: 200px;
     height: auto;
-    /* background-color: red; */
 }
 
-.oneCard > .img-container {
+.card > .img-container {
     height: 100%;
     width: 100%;
 }
