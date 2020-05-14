@@ -10,33 +10,48 @@ import myCards from "./myCards.json";
 // ===== Setting the State to the myCards array (line 8) =====
 //       this.state.myCards
 // ----- this allows for CONDITIONAL RENDERING ---------------
+// class App extends Component {
+//     constructor(myCards) {
+//         super(myCards);
+//         this.state = {
+//         }
+//     }
 class App extends Component {
     state = {
         myCards
     };
 
-    // ===== onClick function 
-    
+    // ======== FUNCTION for click on any ImageCard =========
+    handleClick = () => {
+        if (!this.state.clicked) {
+            console.log(`it was not clicked before`);
+                this.setState({ clicked: false })
+        } else {
+            console.log(`2nd time getting clicked`);
+        }
+    }
 
-
-    // ===== RENDER: using the map method, and   =====
+    // =========== RENDER & RETURN the components ===========
+    // ----- randomly displays each ImageCard -----
     render() {
-
-
-        // ===== RETURN : the components
         return (
             <Main>
                 <Jumbotron />
                 <Navbar />
 
 
-                {myCards.map(picture => (
-                    <ImageCard picture={picture} />
+                {this.state.myCards.map((thisCard) => (
+                    <ImageCard 
+                     handleClick={this.handleClick}
+                     id={thisCard.id}
+                     key={thisCard.id}
+                     image={thisCard.image}
+                     clicked={thisCard.clicked}
+                     />
                 ))}
             </Main>
         );
-
-
     }
+}
 
-    export default App;
+export default App;
