@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-
+// import ScoreCard from "./components/ScoreCard";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import ImageCard from "./components/ImageCard";
 import Main from "./components/Main";
-
 import myCards from "./myCards.json";
 
 // ===== Setting the State to the myCards array (line 8) =====
@@ -21,15 +20,20 @@ class App extends Component {
         myCards
     };
 
+    
+
     // ======== FUNCTION for click on any ImageCard =========
     handleClick = () => {
         if (!this.state.clicked) {
             console.log(`it was not clicked before`);
-                this.setState({ clicked: false })
+            // score++;
+                this.setState({ clicked: true })
         } else {
-            console.log(`2nd time getting clicked`);
+            console.log(`you CLICKED ME ALREADY`);
+                
         }
     }
+
 
     // =========== RENDER & RETURN the components ===========
     // ----- randomly displays each ImageCard -----
@@ -37,8 +41,18 @@ class App extends Component {
         return (
             <Main>
                 <Jumbotron />
-                <Navbar />
+                <nav className="navbar">
+                    <ul>
+                        <li><a href="/">Clicky Game</a></li>
+                        <li>Click an image to begin!</li>
+                        <li></li>
 
+                        <Navbar>
+
+
+                        </Navbar>
+                    </ul>
+                </nav>
 
                 {this.state.myCards.map((thisCard) => (
                     <ImageCard 

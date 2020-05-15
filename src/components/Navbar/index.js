@@ -1,21 +1,17 @@
 import React from "react";
+import ScoreCard from "./ScoreCard";
 import "./style.css";
 
 // --- JSX curly braces to evaluate the style object on the JSX tag
-function Navbar() {
-    return (
-        <nav className="navbar">
-            <ul>
-                <li><a href="/">Clicky Game</a></li>
-                <li>Click an image to begin!</li>
 
-                {/* this needs to increment & reset  */}
-                <li>
-                    Score: 0 | Top Score: 0
-                </li>
-            </ul>
-        </nav>
-    );
-}
+class Navbar extends Component {
+    constructor(scores) {
+        super(scores);
+        this.state = {
+            score = 0,
+            topScore = 0
+        }
+    }
+
 
 export default Navbar;
